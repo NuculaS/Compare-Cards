@@ -1,0 +1,50 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* border: 1px solid black; */
+    width: 600px;
+}
+.item {
+    margin: 1px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    height: 125px;
+    width: 125px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    cursor: pointer;
+    transform: scale(1);
+    user-select: none;
+}
+
+.item:active {
+    transform: scale(0.97);
+    transition: transform 0.2s;
+}
+
+.checked {
+    background-color: rgb(159, 26, 26);
+    cursor: default;
+}
+
+.checked:active {
+    transform: scale(1);
+    transition: none;
+}
+
+button {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
