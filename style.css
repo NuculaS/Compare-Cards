@@ -50,8 +50,8 @@ button {
 }
 @media (max-width: 900px) {
     .item {
-        height: 70px;
-        width: 70px;
+        height: 90px;
+        width: 90px;
         margin: 1px;
         box-sizing: border-box;
         border: 1px solid black;
