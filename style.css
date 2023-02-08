@@ -48,3 +48,19 @@ button {
     transform: translate(-50%, -50%);
     cursor: pointer;
 }
+@media (max-width: 900px) {
+    .item {
+        height: 70px;
+        width: 70px;
+        margin: 1px;
+        box-sizing: border-box;
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 100px;
+        cursor: pointer;
+        transform: scale(1);
+        user-select: none;
+    }
+}
