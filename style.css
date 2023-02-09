@@ -17,13 +17,17 @@ body {
     border: 1px solid black;
     height: 125px;
     width: 125px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 100px;
     cursor: pointer;
     transform: scale(1);
-    user-select: none;
+    border-radius: 12px;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
 }
 
 .item:active {
@@ -32,8 +36,11 @@ body {
 }
 
 .checked {
-    background-color: rgb(159, 26, 26);
     cursor: default;
+}
+
+.checked img {
+    filter: grayscale(1);
 }
 
 .checked:active {
@@ -47,20 +54,20 @@ button {
     left: 50%;
     transform: translate(-50%, -50%);
     cursor: pointer;
+    padding: 5px 20px;
+    border-radius: 12px;
+    border: none;
 }
+
+button:hover {
+    background-color: #d0bdf4;
+    color: white;
+    border: 2px solid #a28089;
+}
+
 @media (max-width: 900px) {
     .item {
         height: 90px;
         width: 90px;
-        margin: 1px;
-        box-sizing: border-box;
-        border: 1px solid black;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 100px;
-        cursor: pointer;
-        transform: scale(1);
-        user-select: none;
     }
 }

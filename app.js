@@ -1,5 +1,12 @@
 const container = document.querySelector('.container')
-const mass = ['a', 'b', 'c', 'd', 'e', 'f']
+const mass = [
+    'image/0.jpeg',
+    'image/1.jpeg',
+    'image/2.jpeg',
+    'image/3.jpeg',
+    'image/4.jpeg',
+    'image/5.jpeg',
+]
 const itemArray = createRandomMass(mass)
 console.log(itemArray)
 let check = 0
@@ -20,11 +27,11 @@ itemArray.forEach((elem, index) => {
             return null
         }
         if (check == 0) {
-            item.innerHTML = elem
+            item.innerHTML = `<img src = "${elem}"/>`
             firstCardIndex = index
             check++
         } else if (check == 1 && index != firstCardIndex) {
-            item.innerHTML = elem
+            item.innerHTML = `<img src = "${elem}"/>`
             check++
             if (itemArray[index] == itemArray[firstCardIndex]) {
                 item.classList.add('checked')
@@ -65,5 +72,5 @@ function checkWin() {
 
     audio.play()
     body.innerHTML = '<img src="flexdog.gif">'
-    body.innerHTML += '<button onclick = "location.reload()">Еще?</button>'
+    body.innerHTML += '<button onclick = "location.reload()">Again?</button>'
 }
